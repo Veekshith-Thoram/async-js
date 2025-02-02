@@ -1,12 +1,12 @@
 
 
 
-const strlength = (inputName, inputFunc) => {
-    inputFunc(inputName)
+const strlength = (inputName, cb) => {
+    cb(inputName.length)
 }
 
-const inputFunc = name => {
-    console.log(name.length)
+const cb = nameLength => {
+    console.log(nameLength)
 }
 
-strlength("Veekshith", inputFunc)
+strlength("Veekshithhh", cb)
