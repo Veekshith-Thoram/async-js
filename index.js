@@ -25,3 +25,11 @@ const thanosDead = () => {
 }
 
 willThanosKillMe("Sadhvikaa", thanosAlive, thanosDead)
+
+const timeoutFunc = (message, delay) => {
+    setTimeout(()=>{
+        console.log(message);
+    }, delay);
+}
+
+timeoutFunc("Sadhvika", 2000);
