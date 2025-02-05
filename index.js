@@ -33,3 +33,13 @@ const timeoutFunc = (message, delay) => {
 }
 
 timeoutFunc("Sadhvika", 2000);
+
+
+//set interval
+const intervalFunc = (msg, delay) => {
+    setInterval(()=>{
+        console.log(msg);
+    }, delay);
+}
+
+// intervalFunc("Sadhvi Thalli", 1000);
