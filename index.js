@@ -43,3 +43,36 @@ const intervalFunc = (msg, delay) => {
 }
 
 // intervalFunc("Sadhvi Thalli", 1000);
+
+const countdownFunc = num => {
+    var timeleft = num;
+    const intervalId = setInterval(()=>{
+        // console.log(timeleft);
+        timeleft--;
+
+        if(timeleft <= 0){
+            clearInterval(intervalId);
+            console.log("timeup")
+        }
+        // console.log(intervalId)
+    }, 1000)
+}
+
+// countdownFunc(10);
+
+// fake fetch call
+function fakeFetch(message, shouldReject){
+    return new Promise((resolve, reject)=> {
+        setTimeout(()=> {
+            if(shouldReject){
+                reject(`rejecteddd ${message} sorry`);
+            }
+            resolve(`server from message ${message}`)
+        }, 3000)
+    })
+};
+
+const errorHandler = event => console.error(event);
+
+fakeFetch("thalliiiiiii", true).then(data => console.log(data)).catch(errorHandler)
+
