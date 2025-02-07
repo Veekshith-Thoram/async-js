@@ -74,5 +74,10 @@ function fakeFetch(message, shouldReject){
 
 const errorHandler = event => console.error(event);
 
-fakeFetch("thalliiiiiii", true).then(data => console.log(data)).catch(errorHandler)
+// fakeFetch("thalliiiiiii", true).then(data => console.log(data)).catch(errorHandler)
 
+const getServerResponseLength = msg => {
+    fakeFetch(msg).then(data => console.log(data.length)).catch(errorHandler);
+}
+
+getServerResponseLength("SadhviKannamma")
