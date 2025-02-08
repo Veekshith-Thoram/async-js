@@ -87,4 +87,27 @@ const synCallsToServer = (msg1, msg2) => {
     fakeFetch(msg1).then(data => fakeFetch(msg2).then(data2 => console.log({data, data2})))
 }
 
-synCallsToServer("thalli", "sadhvee")
+// synCallsToServer("thalli", "sadhvee")
+
+//async await
+
+const printDataFromServer = async (msg1, msg2) => {
+    try{
+        const returnData = await fakeFetch("BUjjamma");
+        console.log(returnData)
+    } catch(err){
+        console.error(err)
+    }
+}
+
+printDataFromServer();
+
+//waterfall using async await
+
+const syncCallServer2 = async (msg1, msg2) => {
+    const data1 = await fakeFetch(msg1);
+    const data2 = await fakeFetch(msg2);
+    console.log({data1, data2})
+}
+
+syncCallServer2("SadhVee", "Kannamma")
