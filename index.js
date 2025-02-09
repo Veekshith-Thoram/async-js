@@ -111,3 +111,13 @@ const syncCallServer2 = async (msg1, msg2) => {
 }
 
 syncCallServer2("SadhVee", "Kannamma")
+
+const syncCallServer3 = async (msg1, msg2) => {
+    const [data1, data2]  = await Promise.all([
+        fakeFetch(msg1),
+        fakeFetch(msg2)
+    ])
+    console.log(data1, data2)
+}
+
+syncCallServer3("Kannamma", "I love you chitti thalli")
